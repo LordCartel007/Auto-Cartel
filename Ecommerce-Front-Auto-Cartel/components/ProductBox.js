@@ -5,10 +5,13 @@ import Link from "next/link";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const ProductWrapper = styled.div``;
 
 const WhiteBox = styled(Link)`
-  background-color: #fff;
+  background-color: #222;
   padding: 20px;
   height: 120px;
   text-align: center;
@@ -18,7 +21,7 @@ const WhiteBox = styled(Link)`
   border-radius: 10px;
   img {
     max-width: 100%;
-    max-height: 130px;
+    max-height: 100px;
     width: auto;
     height: auto;
   }
@@ -47,8 +50,9 @@ const PriceRow = styled.div`
 const Price = styled.div`
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: green;
   text-align: left;
+  background-color: white;
 `;
 
 export default function ProductBox({ _id, title, description, price, images }) {
@@ -67,13 +71,18 @@ export default function ProductBox({ _id, title, description, price, images }) {
           <Price>₦{price}</Price>
           <Button
             $block
-            onClick={() => addProduct(_id)}
+            onClick={() => {
+              addProduct(_id);
+              toast.success("Added to cart!", { autoClose: 2000 }); // 2-second toast
+            }}
             $primary={1}
             $outline={1}
           >
             Add to cart
           </Button>
         </PriceRow>
+        {/* Toast container to display notifications */}
+        <ToastContainer />
       </ProductInfoBox>
     </ProductWrapper>
   );

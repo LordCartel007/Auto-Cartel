@@ -10,6 +10,9 @@ import Button from "../../components/Button";
 import CartIcon from "../../components/icons/CartIcon";
 import { useContext } from "react";
 import { CartContext } from "../../components/CartContext";
+// using toast for alerting user when product is added to cart
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ColWrapper = styled.div`
   display: grid;
@@ -52,11 +55,19 @@ export default function ProductPage({ product }) {
                 <Price>₦{product.price}</Price>
               </div>
               <div>
-                <Button $primary onClick={() => addProduct(product._id)}>
+                <Button
+                  $primary
+                  onClick={() => {
+                    addProduct(product._id);
+                    toast.success("Added to cart!", { autoClose: 2000 }); // 2-second toast
+                  }}
+                >
                   <CartIcon /> Add to Cart
                 </Button>
               </div>
             </PriceRow>
+            {/* Toast container to display notifications */}
+            <ToastContainer />
           </div>
         </ColWrapper>
       </Center>

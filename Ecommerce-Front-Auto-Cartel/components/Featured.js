@@ -92,38 +92,31 @@ export default function Featured({ product }) {
   }
 
   return (
-    <Bg>
-      <Center>
-        <ColumnsWrapper>
-          <Column>
-            <div>
-              <Title>{product.title}</Title>
-              <Desc>{product.description}</Desc>
-              <ButtonsWrapper>
-                <ButtonLink
-                  href={"/product/" + product._id}
-                  $outline={1}
-                  $white={1}
-                >
-                  Read more
-                </ButtonLink>
-                <Button $white={1} onClick={addFeaturedToCart}>
-                  <CartIcon />
-                  Add to cart
-                </Button>
-              </ButtonsWrapper>
-            </div>
-          </Column>
-          <Column>
-            <ImageContainer>
-              <ImgCreated
-                src="https://static.vecteezy.com/system/resources/previews/030/659/087/large_2x/minimalist-macbook-wallpaper-high-quality-free-photo.jpg"
-                alt="Pro Anywhere"
-              />
-            </ImageContainer>
-          </Column>
-        </ColumnsWrapper>
-      </Center>
-    </Bg>
+    <></>
+    // <Bg>
+    //   <Center>
+    //     <ColumnsWrapper>
+    //       <Column>
+    //         <div>
+    //           <Title>{product.title}</Title>
+    //           <Desc>{product.description}</Desc>
+    //           <ButtonsWrapper>
+    //             <ButtonLink
+    //               href={"/product/" + product._id}
+    //               $outline={1}
+    //               $white={1}
+    //             >
+    //               Read more
+    //             </ButtonLink>
+    //             <Button $white={1} onClick={addFeaturedToCart}>
+    //               <CartIcon />
+    //               Add to cart
+    //             </Button>
+    //           </ButtonsWrapper>
+    //         </div>
+    //       </Column>
+    //     </ColumnsWrapper>
+    //   </Center>
+    // </Bg>
   );
 }

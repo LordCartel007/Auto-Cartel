@@ -17,5 +17,6 @@
 # local env files
 
 .env
-
+.next
+.package-lock.json
 
