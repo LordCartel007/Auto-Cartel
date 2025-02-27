@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { CartContextProvider } from "../components/CartContext";
-import "../styles/videoBackground.css";
+import "../styles/videobackground.css";
 
 const GlobalStyles = createGlobalStyle`
 
