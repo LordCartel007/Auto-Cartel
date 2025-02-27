@@ -11,7 +11,7 @@ export default function HomePage({ featuredProduct, newProducts }) {
         <Header />
 
         <iframe
-          src="/3dCarousel/carousel.html"
+          src="http://3d-carousel.s3-website-us-east-1.amazonaws.com/"
           width="100%"
           height="90%"
           style={{ border: "none" }}
