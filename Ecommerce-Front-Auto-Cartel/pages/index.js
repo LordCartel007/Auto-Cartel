@@ -11,7 +11,7 @@ export default function HomePage({ featuredProduct, newProducts }) {
         <Header />
 
         <iframe
-          src="https://movie-cartel.vercel.app/"
+          src="https://3d-carousel-autocartel.vercel.app/"
           width="100%"
           height="90%"
           style={{ border: "none" }}
