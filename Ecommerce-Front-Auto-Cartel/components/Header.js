@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import BarsIcon from "./icons/Bars";
 import { useState } from "react";
+import ContactPage from "../pages/contact";
 
 const StyledHeader = styled.header`
   background-color: #222;
@@ -88,6 +89,7 @@ export default function Header() {
           <StyledNav $mobileNavActive={mobileNavActive}>
             <NavLink href={"/"}>Home</NavLink>
             <NavLink href={"/products"}>All Products</NavLink>
+            <NavLink href={"/contact"}>Contact Us</NavLink>
             <ExternalLink href="https://chatcartel.autocartel.shop">
               Message Us
             </ExternalLink>

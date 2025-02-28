@@ -10,6 +10,7 @@ import axios from "axios";
 import Table from "../components/Table";
 import Input from "../components/Input";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const ColumnsWrapper = styled.div`
   display: grid;
@@ -66,6 +67,19 @@ const QuantityLabel = styled.span`
 const CityHolder = styled.div`
   display: flex;
   gap: 5px;
+`;
+
+const NavLink = styled(Link)`
+  color: #ffc107;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
 `;
 
 export default function CartPage() {
@@ -330,6 +344,7 @@ export default function CartPage() {
             </Box>
           )}
         </ColumnsWrapper>
+        <NavLink href={"/contact"}>Contact Us</NavLink>
       </Center>
     </>
   );

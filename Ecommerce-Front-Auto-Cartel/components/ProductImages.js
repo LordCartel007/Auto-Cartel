@@ -8,6 +8,7 @@ const Image = styled.img`
   height: 100%;
   width: auto;
   object-fit: cover;
+  cursor: pointer;
 `;
 
 const BigImage = styled.img`
@@ -49,14 +50,44 @@ const BigImageWrapper = styled.div`
   text-align: center;
 `;
 
+/* Overlay for full-screen image */
+const FullScreenOverlay = styled.div`
+  display: ${(props) => (props.$visible ? "flex" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+const FullScreenImage = styled.img`
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  cursor: pointer;
+`;
+
 export default function ProductImages({ images }) {
   const [activeImage, setActiveImage] = useState(images?.[0]);
+  const [isFullScreen, setIsFullScreen] = useState(false);
   return (
     <>
+      {/* Full-Screen Overlay */}
+      <FullScreenOverlay
+        $visible={isFullScreen}
+        onClick={() => setIsFullScreen(false)}
+      >
+        <FullScreenImage src={activeImage} alt="Full screen preview" />
+      </FullScreenOverlay>
       <BigImageWrapper>
-        <BigImage src={activeImage} />
+        <BigImage src={activeImage} onClick={() => setIsFullScreen(true)} />
       </BigImageWrapper>
 
+      {/* Thumbnail Buttons */}
       <ImageButtons>
         {images.map((image) => (
           <ImageButton

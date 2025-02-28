@@ -4,6 +4,8 @@ import { mongooseConnect } from "../lib/mongoose";
 import { Product } from "../models/Product";
 import ProductsGrid from "../components/ProductsGrid";
 import Title from "../components/Title";
+import Footer from "../components/Footer";
+import HorizontalCarousel from "../components/HorizontalCarousel";
 
 // export default function ProductsPage({ products }) {
 //   return (
@@ -27,6 +29,9 @@ export default function ProductsPage({ products }) {
         <ProductsGrid products={products} showAll={true} />{" "}
         {/* Show all products */}
       </Center>
+      <HorizontalCarousel />
+
+      <Footer />
     </>
   );
 }

@@ -3,6 +3,19 @@ import Header from "../components/Header";
 import { Product } from "../models/Product";
 import { mongooseConnect } from "../lib/mongoose";
 import NewProducts from "../components/NewProducts";
+import Footer from "../components/Footer";
+import HorizontalCarousel from "../components/HorizontalCarousel";
+import styled from "styled-components";
+
+const StyledIframe = styled.iframe`
+  width: 100%;
+  height: 90%;
+  border: none;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`;
 
 export default function HomePage({ featuredProduct, newProducts }) {
   return (
@@ -10,12 +23,7 @@ export default function HomePage({ featuredProduct, newProducts }) {
       <div className="containervideo">
         <Header />
 
-        <iframe
-          src="https://3d-carousel-autocartel.vercel.app/"
-          width="100%"
-          height="90%"
-          style={{ border: "none" }}
-        ></iframe>
+        <StyledIframe src="https://3d-carousel-autocartel.vercel.app/" />
 
         <video autoPlay loop muted playsInline className="background-clip">
           <source
@@ -38,6 +46,8 @@ export default function HomePage({ featuredProduct, newProducts }) {
           <NewProducts products={newProducts} />
         </div>
       </div>
+      <HorizontalCarousel />
+      <Footer />
     </>
   );
 }
