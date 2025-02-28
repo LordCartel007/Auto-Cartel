@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 const StyledIframe = styled.iframe`
   width: 100%;
-  height: 90%;
+  height: 80vh;
   border: none;
 
   @media screen and (max-width: 767px) {
