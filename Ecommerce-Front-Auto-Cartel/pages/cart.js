@@ -279,12 +279,72 @@ export default function CartPage() {
                 />
 
                 <Button
-                  $black
+                  //   $black
+                  //   $block
+                  //   type="button"
+                  //   onClick={() => {
+                  //     handleFlutterPayment({
+                  //       callback: (response) => {
+                  //         console.log(response);
+
+                  //         if (response.status === "successful") {
+                  //           // Saving the order to the database
+                  //           const createOrder = async () => {
+                  //             try {
+                  //               const orderData = {
+                  //                 product_Items: ProductItems,
+                  //                 name: name,
+                  //                 email: email,
+                  //                 city: city,
+                  //                 phoneNumber: phoneNumber,
+                  //                 postalCode: postalCode,
+                  //                 streetAddress: streetAddress,
+                  //                 country: country,
+                  //                 paid: true,
+                  //               };
+                  //               console.log(orderData);
+
+                  //               const response = await axios.post(
+                  //                 "/api/flutterCheckOut",
+                  //                 orderData
+                  //               );
+
+                  //               if (response.data.success) {
+                  //                 console.log(
+                  //                   "Order created successfully:",
+                  //                   response.data.order
+                  //                 );
+                  //               } else {
+                  //                 console.error(
+                  //                   "Failed to create order:",
+                  //                   response.data.message
+                  //                 );
+                  //               }
+                  //             } catch (error) {
+                  //               console.error("Error creating order:", error);
+                  //             }
+                  //             console.log("response", response);
+                  //           };
+
+                  //           // Call the function when needed
+                  //           createOrder();
+                  //           clearCart();
+                  //           paymentDone();
+                  //         }
+
+                  //         closePaymentModal(); // this will close the modal programmatically
+                  //       },
+                  //       onClose: () => {},
+                  //     });
+                  //   }}
+                  // > $black
                   $block
                   type="button"
-                  onClick={() => {
+                  onClick={async () => {
+                    // <-- Make this function async
                     handleFlutterPayment({
-                      callback: (response) => {
+                      callback: async (response) => {
+                        // <-- Make callback async
                         console.log(response);
 
                         if (response.status === "successful") {
@@ -302,34 +362,41 @@ export default function CartPage() {
                                 country: country,
                                 paid: true,
                               };
-                              console.log(orderData);
+                              console.log("Sending Order Data:", orderData);
 
-                              const response = await axios.post(
+                              const res = await axios.post(
                                 "/api/flutterCheckOut",
                                 orderData
                               );
 
-                              if (response.data.success) {
+                              console.log("API Response:", res.data);
+
+                              if (res.data.success) {
                                 console.log(
                                   "Order created successfully:",
-                                  response.data.order
+                                  res.data.order
                                 );
+                                return true;
                               } else {
                                 console.error(
                                   "Failed to create order:",
-                                  response.data.message
+                                  res.data.message
                                 );
+                                return false;
                               }
                             } catch (error) {
                               console.error("Error creating order:", error);
+                              return false;
                             }
-                            console.log("response", response);
                           };
 
-                          // Call the function when needed
-                          createOrder();
-                          clearCart();
-                          paymentDone();
+                          // Wait for order creation before clearing cart and redirecting
+                          const orderCreated = await createOrder(); // <-- Ensure this completes first
+
+                          if (orderCreated) {
+                            clearCart();
+                            paymentDone();
+                          }
                         }
 
                         closePaymentModal(); // this will close the modal programmatically
