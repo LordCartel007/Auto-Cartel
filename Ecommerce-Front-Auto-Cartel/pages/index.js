@@ -16,6 +16,7 @@ export default function HomePage({ featuredProduct, newProducts }) {
           height="90%"
           style={{ border: "none" }}
         ></iframe>
+
         <video autoPlay loop muted playsInline className="background-clip">
           <source
             src="https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/Aventador.mp4"

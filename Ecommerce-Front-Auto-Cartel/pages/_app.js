@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import { CartContextProvider } from "../components/CartContext";
 import "../styles/videobackground.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -18,6 +20,7 @@ export default function App({ Component, pageProps }) {
       <GlobalStyles />
       <CartContextProvider>
         <Component {...pageProps} />
+        <ToastContainer />
       </CartContextProvider>
     </>
   );

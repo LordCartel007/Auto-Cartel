@@ -5,14 +5,27 @@ import { Product } from "../models/Product";
 import ProductsGrid from "../components/ProductsGrid";
 import Title from "../components/Title";
 
+// export default function ProductsPage({ products }) {
+//   return (
+//     <>
+//       <Header />
+
+//       <Center>
+//         <Title>All Products</Title>
+//         <ProductsGrid products={products} />
+//       </Center>
+//     </>
+//   );
+// }
+
 export default function ProductsPage({ products }) {
   return (
     <>
       <Header />
-
       <Center>
         <Title>All Products</Title>
-        <ProductsGrid products={products} />
+        <ProductsGrid products={products} showAll={true} />{" "}
+        {/* Show all products */}
       </Center>
     </>
   );

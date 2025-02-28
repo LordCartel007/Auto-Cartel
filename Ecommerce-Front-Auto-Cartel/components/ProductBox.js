@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Button from "./Button";
-import CartIcon from "./icons/CartIcon";
+
 import Link from "next/link";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
@@ -12,8 +12,9 @@ const ProductWrapper = styled.div``;
 
 const WhiteBox = styled(Link)`
   background-color: #222;
-  padding: 20px;
-  height: 120px;
+  padding: 10px;
+  height: 300px;
+  width: auto;
   text-align: center;
   display: flex;
   align-items: center;
@@ -21,22 +22,34 @@ const WhiteBox = styled(Link)`
   border-radius: 10px;
   img {
     max-width: 100%;
-    max-height: 100px;
+    max-height: 230px;
     width: auto;
     height: auto;
+    border-radius: 10px;
   }
 `;
 
 const Title = styled(Link)`
   font-weight: normal;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   margin: 0;
-  color: inherit;
+  color: #ffc107;
   text-decoration: none;
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+  flex: 1; /* Makes title fill available space */
 `;
 
 const ProductInfoBox = styled.div`
+  border-radius: 10px;
+  background-color: #222;
   margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Makes all product boxes take equal height */
+  padding: 10px;
+  min-height: 150px;
 `;
 
 const PriceRow = styled.div`
@@ -50,9 +63,13 @@ const PriceRow = styled.div`
 const Price = styled.div`
   font-size: 1.5rem;
   font-weight: 600;
-  color: green;
+  color: #198754;
   text-align: left;
   background-color: white;
+  border-radius: 10px;
+  justify-self: center;
+
+  background-color: #222;
 `;
 
 export default function ProductBox({ _id, title, description, price, images }) {
@@ -81,8 +98,6 @@ export default function ProductBox({ _id, title, description, price, images }) {
             Add to cart
           </Button>
         </PriceRow>
-        {/* Toast container to display notifications */}
-        <ToastContainer />
       </ProductInfoBox>
     </ProductWrapper>
   );

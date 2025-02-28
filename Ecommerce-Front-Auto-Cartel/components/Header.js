@@ -43,6 +43,16 @@ const StyledNav = styled.nav`
   }
 `;
 
+const ExternalLink = styled.a`
+  color: #aaa;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+`;
+
 const NavLink = styled(Link)`
   color: #aaa;
   text-decoration: none;
@@ -78,7 +88,9 @@ export default function Header() {
           <StyledNav $mobileNavActive={mobileNavActive}>
             <NavLink href={"/"}>Home</NavLink>
             <NavLink href={"/products"}>All Products</NavLink>
-
+            <ExternalLink href="https://chatcartel.autocartel.shop">
+              Message Us
+            </ExternalLink>
             <NavLink href={"/cart"}>Cart ({cartProducts.length})</NavLink>
           </StyledNav>
           <NavButton onClick={() => setMobileNavActive((prev) => !prev)}>
