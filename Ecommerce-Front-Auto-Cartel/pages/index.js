@@ -17,12 +17,18 @@ const StyledIframe = styled.iframe`
   }
 `;
 
+const StyledDiv = styled.div`
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`;
+
 export default function HomePage({ featuredProduct, newProducts }) {
   return (
     <>
-      <div className="containervideo">
-        <Header />
-
+      {" "}
+      <Header />
+      <StyledDiv className="containervideo">
         <StyledIframe src="https://3d-carousel-autocartel.vercel.app/" />
 
         <video autoPlay loop muted playsInline className="background-clip">
@@ -32,8 +38,7 @@ export default function HomePage({ featuredProduct, newProducts }) {
           />
         </video>
         <div className="content"></div>
-      </div>
-
+      </StyledDiv>
       <div className="containervideo">
         <video autoPlay loop muted playsInline className="background-clip">
           <source

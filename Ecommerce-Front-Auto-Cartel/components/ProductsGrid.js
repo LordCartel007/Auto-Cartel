@@ -60,7 +60,7 @@ export default function ProductsGrid({ products, showAll = false }) {
       if (showAll) {
         setVisibleProducts(products); // Show all products
       } else if (window.innerWidth <= 767) {
-        setVisibleProducts(products.slice(0, 1)); // Show 2 on small screens
+        setVisibleProducts(products.slice(0, 1)); // Show 1 on small screens
       } else {
         setVisibleProducts(products.slice(0, 4)); // Show 4 on larger screens
       }

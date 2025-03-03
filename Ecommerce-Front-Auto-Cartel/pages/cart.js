@@ -337,7 +337,8 @@ export default function CartPage() {
                   //       onClose: () => {},
                   //     });
                   //   }}
-                  // > $black
+                  // >
+                  $black
                   $block
                   type="button"
                   onClick={async () => {
