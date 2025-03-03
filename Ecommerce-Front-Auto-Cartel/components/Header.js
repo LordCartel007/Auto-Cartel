@@ -10,6 +10,7 @@ import ContactPage from "../pages/contact";
 const StyledHeader = styled.header`
   background-color: #222;
   width: 100%;
+  z-index: 100;
 `;
 
 const Logo = styled(Link)`
@@ -36,11 +37,20 @@ const StyledNav = styled.nav`
   left: 0;
   right: 0;
   padding: 70px 20px 20px;
-  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.95); /* Slight transparency */
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+
+  transform: ${(props) =>
+    props.$mobileNavActive ? "translateX(0)" : "translateX(100%)"};
+
   @media screen and (min-width: 768px) {
     display: flex;
     position: static;
     padding: 0;
+
+    background-color: transparent;
+    transform: none;
   }
 `;
 
@@ -78,6 +88,16 @@ const NavButton = styled.button`
   }
 `;
 
+const NavOverlay = styled.div`
+  display: ${(props) => (props.$mobileNavActive ? "block" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 999;
+`;
 export default function Header() {
   const { cartProducts } = useContext(CartContext);
   const [mobileNavActive, setMobileNavActive] = useState(false);
@@ -86,14 +106,33 @@ export default function Header() {
       <Center>
         <Wrapper>
           <Logo href={"/"}>Auto-Cartel</Logo>
+          <NavOverlay
+            $mobileNavActive={mobileNavActive}
+            onClick={() => setMobileNavActive(false)}
+          />
+
           <StyledNav $mobileNavActive={mobileNavActive}>
-            <NavLink href={"/"}>Home</NavLink>
-            <NavLink href={"/products"}>All Products</NavLink>
-            <NavLink href={"/contact"}>Contact Us</NavLink>
+            <NavLink href={"/"} onClick={() => setMobileNavActive(false)}>
+              Home
+            </NavLink>
+            <NavLink
+              href={"/products"}
+              onClick={() => setMobileNavActive(false)}
+            >
+              All Products
+            </NavLink>
+            <NavLink
+              href={"/contact"}
+              onClick={() => setMobileNavActive(false)}
+            >
+              Contact Us
+            </NavLink>
             <ExternalLink href="https://chatcartel.autocartel.shop">
               Message Us
             </ExternalLink>
-            <NavLink href={"/cart"}>Cart ({cartProducts.length})</NavLink>
+            <NavLink href={"/cart"} onClick={() => setMobileNavActive(false)}>
+              Cart ({cartProducts.length})
+            </NavLink>
           </StyledNav>
           <NavButton onClick={() => setMobileNavActive((prev) => !prev)}>
             <BarsIcon />
