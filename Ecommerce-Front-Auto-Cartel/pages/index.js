@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 const StyledIframe = styled.iframe`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   border: none;
 
   @media screen and (max-width: 767px) {
@@ -29,7 +29,10 @@ export default function HomePage({ featuredProduct, newProducts }) {
       {" "}
       <Header />
       <StyledDiv className="containervideo">
-        <StyledIframe src="https://3d-carousel-autocartel.vercel.app/" />
+        <StyledIframe
+          className="carousel"
+          src="https://3d-carousel-autocartel.vercel.app/"
+        />
 
         <video autoPlay loop muted playsInline className="background-clip">
           <source
