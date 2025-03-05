@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import BarsIcon from "./icons/Bars";
 import { useState } from "react";
-import ContactPage from "../pages/contact";
 
 const StyledHeader = styled.header`
   background-color: #222;
