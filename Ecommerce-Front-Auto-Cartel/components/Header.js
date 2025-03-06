@@ -126,6 +126,7 @@ export default function Header() {
             >
               Contact Us
             </NavLink>
+            {/* Link to chat web app */}
             <ExternalLink href="https://chatcartel.autocartel.shop">
               Message Us
             </ExternalLink>
