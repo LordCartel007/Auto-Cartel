@@ -27,6 +27,46 @@ const WhiteBox = styled(Link)`
     height: auto;
     border-radius: 10px;
   }
+  /* phone screen */
+  @media screen and (max-width: 767px) {
+    background-color: #222;
+
+    height: 130px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    img {
+      padding: 5px;
+      max-width: 100%;
+      max-height: 120px;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  /* nest hub tv screen */
+  @media screen and (min-width: 1023px) {
+    background-color: #222;
+
+    height: 230px;
+    width: 100%;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    img {
+      padding: 5px;
+      max-width: 100%;
+      max-height: 210px;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
 `;
 
 const Title = styled(Link)`
@@ -39,6 +79,15 @@ const Title = styled(Link)`
   font-weight: 400;
   font-style: normal;
   flex: 1; /* Makes title fill available space */
+
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
+
+  /* nest hub tv screen */
+  @media screen and (min-width: 1023px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const ProductInfoBox = styled.div`
@@ -50,6 +99,10 @@ const ProductInfoBox = styled.div`
   flex: 1; /* Makes all product boxes take equal height */
   padding: 10px;
   min-height: 150px;
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+    min-height: 130px;
+  }
 `;
 
 const PriceRow = styled.div`
@@ -70,6 +123,13 @@ const Price = styled.div`
   justify-self: center;
 
   background-color: #222;
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
+  /* nest hub tv screen */
+  @media screen and (min-width: 1023px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export default function ProductBox({ _id, title, description, price, images }) {

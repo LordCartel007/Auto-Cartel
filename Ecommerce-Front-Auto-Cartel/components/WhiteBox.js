@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const WhiteBox = styled.div`
-  background-color: #fff;
+  background-color: #222;
   border-radius: 20px;
   align-items: center;
 

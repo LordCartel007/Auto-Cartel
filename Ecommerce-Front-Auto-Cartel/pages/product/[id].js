@@ -13,6 +13,22 @@ import { CartContext } from "../../components/CartContext";
 // using toast for alerting user when product is added to cart
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
+
+const NavLink = styled(Link)`
+  color: #ffc107;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7rem;
+  margin-top: 10px;
+`;
 
 const ColWrapper = styled.div`
   display: grid;
@@ -70,6 +86,8 @@ export default function ProductPage({ product }) {
             <ToastContainer />
           </div>
         </ColWrapper>
+
+        <NavLink href={"/contact"}>Contact Us</NavLink>
       </Center>
     </>
   );

@@ -8,6 +8,10 @@ const CarouselContainer = styled.div`
   width: 100%;
   height: 200px;
   padding: 10px;
+  background-color: #222;
+  @media screen and (max-width: 767px) {
+    height: 140px;
+  }
 `;
 
 const CarouselWrapper = styled.div`
@@ -19,7 +23,7 @@ const CarouselWrapper = styled.div`
 
 const Image = styled.img`
   height: 180px;
-  width: 300px; /* Ensure all images have the same width */
+  width: 150px; /* Ensure all images have the same width */
   object-fit: cover; /* Prevent stretching */
   border-radius: 10px;
   cursor: pointer;
@@ -27,6 +31,10 @@ const Image = styled.img`
 
   &:hover {
     transform: scale(1.1);
+  }
+  @media screen and (max-width: 767px) {
+    height: 120px;
+    width: 100px;
   }
 `;
 
@@ -37,15 +45,15 @@ const FullScreenOverlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: #000;
   align-items: center;
   justify-content: center;
   z-index: 1000;
 `;
 
 const FullScreenImage = styled.img`
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 98%;
+  max-height: 98%;
   border-radius: 10px;
 `;
 
@@ -97,7 +105,7 @@ export default function HorizontalCarousel() {
         if (!wrapperRef.current) return prev;
         return prev >= wrapperRef.current.scrollWidth ? 0 : prev + scrollSpeed;
       });
-    }, 15); // Adjust scrolling interval
+    }, 18); // Adjust scrolling interval
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
