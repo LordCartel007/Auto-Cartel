@@ -4,10 +4,12 @@ import Center from "../components/Center";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa"; // WhatsApp Icon
 import Header from "../components/Header";
 const ContactWrapper = styled.div`
+  margin-top: 40px;
   background-color: #222;
   color: #fff;
   padding: 40px 20px;
   text-align: center;
+  border-radius: 10px;
 `;
 
 const ContactTitle = styled.h2`
