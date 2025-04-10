@@ -7,6 +7,22 @@ import Title from "../components/Title";
 import Footer from "../components/Footer";
 import HorizontalCarousel from "../components/HorizontalCarousel";
 
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  background-color: #ffffff;
+  max-width: 100%;
+
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  @media screen and (max-width: 767px) {
+    padding: 0 7px;
+    img {
+    }
+  }
+`;
+
 // export default function ProductsPage({ products }) {
 //   return (
 //     <>
@@ -24,11 +40,11 @@ export default function ProductsPage({ products }) {
   return (
     <>
       <Header />
-      <Center>
+      <StyledDiv>
         <Title>All Products</Title>
         <ProductsGrid products={products} showAll={true} />{" "}
         {/* Show all products */}
-      </Center>
+      </StyledDiv>
       <HorizontalCarousel />
 
       <Footer />
