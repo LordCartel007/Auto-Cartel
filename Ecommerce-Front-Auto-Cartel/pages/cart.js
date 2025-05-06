@@ -25,16 +25,20 @@ const ColumnsWrapper = styled.div`
 `;
 
 const Box = styled.div`
-  background-color: #fff;
+  background-color: #222222;
+  color: #d9ecff;
   border-radius: 10px;
   padding: 30px;
 `;
 
 const ProductInfoCell = styled.td`
+  color: #d9ecff;
   padding: 10px 0;
 `;
 
 const ProductImageBox = styled.div`
+  color: #d9ecff;
+
   width: 100px;
   height: 100px;
   padding: 2px;
@@ -55,6 +59,7 @@ const ProductImageBox = styled.div`
 `;
 
 const QuantityLabel = styled.span`
+  color: #d9ecff;
   padding: 0 15px;
   display: block;
 
@@ -73,7 +78,8 @@ const NavLink = styled(Link)`
   color: #ffc107;
   text-decoration: none;
   display: block;
-  padding: 10px 0;
+
+  padding: 20px;
   @media screen and (min-width: 768px) {
     padding: 0;
   }

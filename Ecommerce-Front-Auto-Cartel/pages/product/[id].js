@@ -30,6 +30,11 @@ const NavLink = styled(Link)`
   margin-top: 10px;
 `;
 
+const Description = styled.p`
+  color: #d9ecff;
+  padding: 15px;
+`;
+
 const ColWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -43,6 +48,7 @@ const ColWrapper = styled.div`
 `;
 
 const PriceRow = styled.div`
+  color: #198754;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -65,7 +71,7 @@ export default function ProductPage({ product }) {
 
           <div>
             <Title>{product.title}</Title>
-            <p>{product.description}</p>
+            <Description>{product.description}</Description>
             <PriceRow>
               <div>
                 <Price>₦{product.price}</Price>

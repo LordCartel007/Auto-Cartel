@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 const ProductWrapper = styled.div``;
 
 const WhiteBox = styled(Link)`
-  background-color: #222;
+  background-color: #0e0e10;
   padding: 10px;
   height: 300px;
   width: auto;
@@ -29,8 +29,6 @@ const WhiteBox = styled(Link)`
   }
   /* phone screen */
   @media screen and (max-width: 767px) {
-    background-color: #222;
-
     height: 130px;
 
     text-align: center;
@@ -49,8 +47,6 @@ const WhiteBox = styled(Link)`
 
   /* nest hub tv screen */
   @media screen and (min-width: 1023px) {
-    background-color: #222;
-
     height: 230px;
     width: 100%;
 
@@ -92,7 +88,7 @@ const Title = styled(Link)`
 
 const ProductInfoBox = styled.div`
   border-radius: 10px;
-  background-color: #222;
+  background-color: #0e0e10;
   margin-top: 5px;
   display: flex;
   flex-direction: column;

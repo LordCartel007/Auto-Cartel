@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Center from "../components/Center";
 
 const FooterWrapper = styled.footer`
-  background-color: #222;
+  background-color: #0e0e10;
   color: #aaa;
   padding: 20px 0;
   width: 100%;
@@ -19,7 +19,7 @@ const FooterNav = styled.nav`
 `;
 
 const FooterLink = styled(Link)`
-  color: #aaa;
+  color: #d9ecff;
   text-decoration: none;
   font-size: 14px;
   &:hover {
@@ -28,7 +28,7 @@ const FooterLink = styled(Link)`
 `;
 
 const ContactUs = styled(Link)`
-  color: #aaa;
+  color: #d9ecff;
   text-decoration: none;
   font-size: 14px;
   &:hover {
@@ -38,6 +38,7 @@ const ContactUs = styled(Link)`
 const FooterText = styled.p`
   font-size: 12px;
   margin-top: 10px;
+  color: #d9ecff;
 `;
 
 export default function Footer() {

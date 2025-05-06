@@ -8,13 +8,13 @@ import BarsIcon from "./icons/Bars";
 import { useState } from "react";
 
 const StyledHeader = styled.header`
-  background-color: #222;
+  background-color: #0e0e10;
   width: 100%;
   z-index: 100;
 `;
 
 const Logo = styled(Link)`
-  color: #fff;
+  color: #d9ecff;
   text-decoration: none;
 
   position: relative;
@@ -37,7 +37,7 @@ const StyledNav = styled.nav`
   left: 0;
   right: 0;
   padding: 70px 20px 20px;
-  background-color: rgba(34, 34, 34, 0.95); /* Slight transparency */
+  background-color: #000000; /* Slight transparency */
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
 
@@ -55,7 +55,7 @@ const StyledNav = styled.nav`
 `;
 
 const ExternalLink = styled.a`
-  color: #aaa;
+  color: #d9ecff;
   text-decoration: none;
   display: block;
   padding: 10px 0;
@@ -65,7 +65,7 @@ const ExternalLink = styled.a`
 `;
 
 const NavLink = styled(Link)`
-  color: #aaa;
+  color: #d9ecff;
   text-decoration: none;
   display: block;
   padding: 10px 0;
@@ -95,7 +95,7 @@ const NavOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background: #000000; /* Dark overlay */
   z-index: 999;
 `;
 export default function Header() {

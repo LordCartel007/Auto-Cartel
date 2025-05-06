@@ -10,7 +10,7 @@ import HorizontalCarousel from "../components/HorizontalCarousel";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-  background-color: #ffffff;
+  background-color: #000000;
   max-width: 100%;
 
   margin: 0 auto;

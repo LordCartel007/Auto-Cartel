@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 const GlobalStyles = createGlobalStyle`
 
  body{
-  background-color: #eee;
+  background-color: #000000;
   padding:0;
   margin:0;
   font-family: "poppins", sans-serif;

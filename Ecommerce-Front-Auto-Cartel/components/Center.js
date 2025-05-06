@@ -5,6 +5,7 @@ const StyledDiv = styled.div`
 
   margin: 0 auto;
   padding: 0 20px;
+
   height: 100%;
   @media screen and (max-width: 767px) {
     padding: 0 7px;
