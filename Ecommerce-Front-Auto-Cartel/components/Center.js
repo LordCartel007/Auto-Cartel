@@ -9,6 +9,7 @@ const StyledDiv = styled.div`
   height: 100%;
   @media screen and (max-width: 767px) {
     padding: 0 7px;
+
     img {
     }
   }

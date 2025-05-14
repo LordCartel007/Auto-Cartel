@@ -11,6 +11,7 @@ const NavLink = styled(Link)`
   @media screen and (min-width: 768px) {
     padding: 0;
   }
+
   font-family: "Rye", serif;
   font-weight: 400;
   font-style: normal;
@@ -36,7 +37,7 @@ const StyledProductsGrid = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1020px) {
     /* Styles for tablets */
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 80px;
+    gap: 10px;
   }
 
   @media screen and (min-width: 1021px) {

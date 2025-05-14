@@ -29,16 +29,28 @@ const WhiteBox = styled(Link)`
   }
   /* phone screen */
   @media screen and (max-width: 767px) {
-    height: 130px;
+    height: 150px;
 
     text-align: center;
 
     border-radius: 10px;
 
     img {
-      padding: 5px;
+      padding: 1px;
       max-width: 100%;
-      max-height: 120px;
+      max-height: 130px;
+      width: auto;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    height: 230px;
+
+    img {
+      max-width: 100%;
+      max-height: 200px;
       width: auto;
       height: auto;
       border-radius: 10px;
@@ -78,7 +90,11 @@ const Title = styled(Link)`
   text-align: center;
 
   @media screen and (max-width: 767px) {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  @media screen and (min-width: 767px) {
+    font-size: 1.1rem;
   }
 
   /* nest hub tv screen */
@@ -90,13 +106,25 @@ const Title = styled(Link)`
 const ProductInfoBox = styled.div`
   border-radius: 10px;
   background-color: #0e0e10;
-  margin-top: 15px;
+
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
 
   padding: 10px;
   min-height: 110px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 3px;
+  }
+  @media screen and (min-width: 767px) {
+    margin-top: 3px;
+    min-height: 150px;
+  }
+  /* nest hub tv screen */
+  @media screen and (min-width: 1023px) {
+    margin-top: 10px;
+  }
 `;
 
 const PriceRow = styled.div`
@@ -118,7 +146,7 @@ const Price = styled.div`
 
   background-color: #222;
   @media screen and (max-width: 767px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   /* nest hub tv screen */
   @media screen and (min-width: 1023px) {
