@@ -75,9 +75,10 @@ const Title = styled(Link)`
   font-weight: 400;
   font-style: normal;
   flex: 1; /* Makes title fill available space */
+  text-align: center;
 
   @media screen and (max-width: 767px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   /* nest hub tv screen */
@@ -89,16 +90,13 @@ const Title = styled(Link)`
 const ProductInfoBox = styled.div`
   border-radius: 10px;
   background-color: #0e0e10;
-  margin-top: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
-  flex: 1; /* Makes all product boxes take equal height */
+
   padding: 10px;
-  min-height: 150px;
-  @media screen and (max-width: 767px) {
-    font-size: 1rem;
-    min-height: 130px;
-  }
+  min-height: 110px;
 `;
 
 const PriceRow = styled.div`

@@ -22,12 +22,13 @@ const NavLink = styled(Link)`
 
 const StyledProductsGrid = styled.div`
   display: grid;
-
+  justify-self: center;
+  padding: 0px 20px;
   gap: 20px;
 
   @media screen and (max-width: 767px) {
     margin-top: 5px;
-    padding-right: 10px;
+
     gap: 20px;
     grid-template-columns: 1fr 1fr;
   }

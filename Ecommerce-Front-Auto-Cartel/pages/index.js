@@ -18,6 +18,7 @@ const StyledIframe = styled.iframe`
 `;
 
 const StyledDiv = styled.div`
+  justify-content: center;
   @media screen and (max-width: 767px) {
     height: 30vh;
   }

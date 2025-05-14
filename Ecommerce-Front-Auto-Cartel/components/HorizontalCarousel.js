@@ -63,40 +63,42 @@ export default function HorizontalCarousel() {
   const wrapperRef = useRef(null);
 
   const images = [
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740694108281.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740694036106.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740694047035.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740694089207.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740694116378.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740694133648.jpg",
-
     "https://cartel-next-ecommerce.s3.amazonaws.com/1740696701581.jfif",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740696717181.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740696737058.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740696764761.PNG",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740696785900.PNG",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740696800643.PNG",
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740699147707.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740699154401.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740699169340.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740699175971.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740699208407.jpg",
-
-    "https://cartel-next-ecommerce.s3.amazonaws.com/1740699237847.jpg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747217771622.jpeg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747217561113.jpeg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747217537130.jpeg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747217495208.jpeg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747214462615.jpeg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747214452038.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747214099529.jfif",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213596562.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213581146.jpeg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213570798.jpeg ",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213561097.jpeg ",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213497565.jpeg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213485025.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213461261.jpeg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213452833.jpeg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213370665.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747217505128.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213353350.jpeg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213191588.jpeg ",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747213181658.jpeg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747212790955.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747212782807.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747212774306.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747212765171.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747212755658.jpeg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747212749291.jpeg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747212738231.jpeg ",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747211950611.jpg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747211941267.jpg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747211930903.jpg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747211743624.jpg",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747211715840.jpg",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747211706250.jpg ",
+    "https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747211693376.jpg ",
+    " https://cartel-next-ecommerce.s3.eu-north-1.amazonaws.com/1747211685021.jpg",
   ];
   useEffect(() => {
     const scrollSpeed = 1; // Adjust speed

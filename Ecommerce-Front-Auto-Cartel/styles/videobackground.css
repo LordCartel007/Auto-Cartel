@@ -56,8 +56,6 @@ body {
 } */
 
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -76,6 +74,8 @@ body {
 
   overflow: hidden;
   margin-bottom: 0%;
+  display: flex;
+  justify-content: center;
 }
 
 .background-clip {
@@ -88,6 +88,9 @@ body {
   object-fit: cover;
   z-index: -1;
   pointer-events: none; /* ✅ Allows touch events to pass through */
+  justify-self: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Add a separate overlay */
@@ -107,7 +110,8 @@ body {
   z-index: 1;
   color: white;
   text-align: center;
-  padding: 20px;
+  justify-self: center;
+  display: flex;
 }
 
 .carousel {
